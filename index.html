@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Page</title>
+    <title>BMSCE Workshop - Interactive Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Simple Page</h1>
-    <p>This is a basic HTML page styled with CSS.</p>
+    <h1>Welcome to BMSCE Workshop!</h1>
+    <p>This is an interactive HTML page with JavaScript functionality.</p>
+    
+    <div id="welcome-message" class="welcome-message">
+        🎉 JavaScript is working! Explore the interactive features below.
+    </div>
+    
+    <div id="datetime" class="datetime"></div>
+    
+    <div class="interactive-section">
+        <h2>Interactive Features</h2>
+        
+        <div class="feature-box">
+            <h3>Click Counter</h3>
+            <button id="interactive-btn" class="btn">Click me!</button>
+            <p>Clicks: <span id="counter">0</span></p>
+        </div>
+        
+        <div class="feature-box">
+            <h3>Background Color Changer</h3>
+            <button id="color-btn" class="btn">Change Background</button>
+        </div>
+        
+        <div class="feature-box">
+            <h3>Hover Animation</h3>
+            <p>Hover over the main title to see it grow!</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
