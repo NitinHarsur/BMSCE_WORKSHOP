@@ -3,11 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Page</title>
+    <title>BMSCE Workshop - Interactive Learning</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Simple Page</h1>
-    <p>This is a basic HTML page styled with CSS.</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2>BMSCE Workshop</h2>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#calculator" class="nav-link">Calculator</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="section">
+        <h1>Welcome to BMSCE Workshop</h1>
+        <p>This is an interactive learning platform for workshop participants.</p>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>Interactive Learning</h3>
+                <p>Engage with hands-on activities and real-time feedback.</p>
+            </div>
+            <div class="card">
+                <h3>Practical Tools</h3>
+                <p>Access useful calculators and utilities for your learning.</p>
+            </div>
+            <div class="card">
+                <h3>Community Support</h3>
+                <p>Connect with fellow learners and share your progress.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About the Workshop</h2>
+        <p>This workshop is designed to provide hands-on experience with web technologies and interactive development.</p>
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="visitor-count">0</span>
+                <span class="stat-label">Visitors Today</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="time-display">00:00:00</span>
+                <span class="stat-label">Current Time</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="section">
+        <h2>Interactive Calculator</h2>
+        <div class="calculator">
+            <div class="calculator-display">
+                <input type="text" id="calc-display" readonly>
+            </div>
+            <div class="calculator-buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="deleteLast()">⌫</button>
+                <button onclick="appendToDisplay('/')">/</button>
+                <button onclick="appendToDisplay('*')">×</button>
+                
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('-')">-</button>
+                
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('+')">+</button>
+                
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="calculate()" rowspan="2" class="equals">=</button>
+                
+                <button onclick="appendToDisplay('0')" colspan="2" class="zero">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact & Feedback</h2>
+        <form id="feedback-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send Feedback</button>
+        </form>
+        <div id="form-message" class="form-message"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 BMSCE Workshop. Created for educational purposes.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
